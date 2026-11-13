@@ -708,16 +708,16 @@ figure.pic figcaption{margin-top:8px;font-size:14px;color:var(--mu)}
 <p><span class="math inline">\(i_{c} = h_{fe}i_{b} + h_{oe}v_{c}\)</span></p>
 <ul>
 <li><blockquote>
-<p><strong>Input Impedance (</strong><span class="math inline">\(h_{ie}\)</span><strong>)</strong>: $h_{ie} = \left.\frac{\partial v_b}{\partial i_b}\right|_{v_c = 0} \quad [\Omega]$2829</p>
+<p><strong>Input Impedance (</strong><span class="math inline">\(h_{ie}\)</span><strong>)</strong>: \(h_{ie} = \left.\frac{\partial v_b}{\partial i_b}\right|_{v_c = 0} \quad [\Omega]\)</p>
 </blockquote></li>
 <li><blockquote>
-<p><strong>Reverse Voltage Transfer Ratio (</strong><span class="math inline">\(h_{re}\)</span><strong>)</strong>: $h_{re} = \left.\frac{\partial v_b}{\partial v_c}\right|_{i_b = 0} \quad [\text{dimensionless}]$</p>
+<p><strong>Reverse Voltage Transfer Ratio (</strong><span class="math inline">\(h_{re}\)</span><strong>)</strong>: \(h_{re} = \left.\frac{\partial v_b}{\partial v_c}\right|_{i_b = 0} \quad [\text{dimensionless}]\)</p>
 </blockquote></li>
 <li><blockquote>
-<p><strong>Forward Current Gain (</strong><span class="math inline">\(h_{fe}\)</span><strong>)</strong>: $h_{fe} = \left.\frac{\partial i_c}{\partial i_b}\right|_{v_c = 0} \quad [\text{dimensionless}]$</p>
+<p><strong>Forward Current Gain (</strong><span class="math inline">\(h_{fe}\)</span><strong>)</strong>: \(h_{fe} = \left.\frac{\partial i_c}{\partial i_b}\right|_{v_c = 0} \quad [\text{dimensionless}]\)</p>
 </blockquote></li>
 <li><blockquote>
-<p><strong>Output Admittance (</strong><span class="math inline">\(h_{oe}\)</span><strong>)</strong>: $h_{oe} = \left.\frac{\partial i_c}{\partial v_c}\right|_{i_b = 0} \quad [\text{S or }\mu\text{S}]$</p>
+<p><strong>Output Admittance (</strong><span class="math inline">\(h_{oe}\)</span><strong>)</strong>: \(h_{oe} = \left.\frac{\partial i_c}{\partial v_c}\right|_{i_b = 0} \quad [\text{S or }\mu\text{S}]\)</p>
 </blockquote></li>
 </ul>
 <p><strong>C. Parameter Conversion Matrix (</strong><span class="math inline">\(h\)</span><strong>-Parameter</strong> $\longleftrightarrow r_e$ <strong>/ Hybrid-</strong><span class="math inline">\(\pi\)</span> <strong>Model)</strong></p>
@@ -838,10 +838,10 @@ figure.pic figcaption{margin-top:8px;font-size:14px;color:var(--mu)}
 <h3 id="general-comparison-fet-vs.-bjt"><strong>General Comparison: FET vs. BJT</strong></h3>
 <ul>
 <li><blockquote>
-<p><strong>Input Impedance</strong>: FETs possess extremely high input resistance (<span class="math inline">\(R_{i} \approx 10^{7},\Omega - 10^{12},\Omega\)</span> for JFETs, <span class="math inline">\(R_{i} &gt; 10^{10},\Omega - 10^{15},\Omega\)</span> for MOSFETs) due to reverse-biased gate junctions or insulating \(\text{SiO}<em>2\) layers, whereas BJTs have moderate input resistance (\(r</em>\pi \approx 1,\text{k}\Omega - 10,\text{k}\Omega\)).</p>
+<p><strong>Input Impedance</strong>: FETs possess extremely high input resistance (<span class="math inline">\(R_{i} \approx 10^{7}\,\Omega - 10^{12}\,\Omega\)</span> for JFETs, <span class="math inline">\(R_{i} &gt; 10^{10}\,\Omega - 10^{15}\,\Omega\)</span> for MOSFETs) due to reverse-biased gate junctions or insulating \(\text{SiO}_2\) layers, whereas BJTs have moderate input resistance (\(r_\pi \approx 1\,\text{k}\Omega - 10\,\text{k}\Omega\)).</p>
 </blockquote></li>
 <li><blockquote>
-<p><strong>Gate/Input Current</strong>: <span class="math inline">\(I_{G} \approx 0A\)</span> for FETs, whereas BJT base current <span class="math inline">\(I_{B} = I_{C}/\beta \neq 0A\)</span>.</p>
+<p><strong>Gate/Input Current</strong>: <span class="math inline">\(I_{G} \approx 0\,\text{A}\)</span> for FETs, whereas BJT base current <span class="math inline">\(I_{B} = I_{C}/\beta \neq 0\,\text{A}\)</span>.</p>
 </blockquote></li>
 <li><blockquote>
 <p><strong>Thermal Stability &amp; Size</strong>: FETs offer superior thermal stability, lower noise figures, and smaller physical footprints on integrated circuits (ICs).</p>
@@ -2466,56 +2466,58 @@ figure.pic figcaption{margin-top:8px;font-size:14px;color:var(--mu)}
 <col style="width: 15%" />
 <col style="width: 16%" />
 </colgroup>
-<thead>
-<tr class="header">
-<th><strong>Oscillator Type</strong></th>
-<th><strong>Reactive / Tuning Elements</strong></th>
-<th><strong>Resonant Frequency Formula (</strong><span class="math inline">\(f_{o}\)</span><strong>)</strong></th>
-<th><strong>Minimum Amplifier Gain Requirement</strong></th>
-<th><strong>Typical Operating Frequency Range</strong></th>
-<th><strong>Key Feature / Advantage</strong></th>
+
+<thead><tr>
+<th>Oscillator Type</th>
+<th>Reactive / Tuning Elements</th>
+<th>Resonant Frequency Formula (<span class="math inline">\(f_o\)</span>)</th>
+<th>Minimum Amplifier Gain Requirement</th>
+<th>Typical Operating Frequency Range</th>
+<th>Key Feature / Advantage</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>RC Phase-Shift</strong></td>
+<td>3 <span class="math inline">\(RC\)</span> sections</td>
+<td><span class="math inline">\(f_o=\frac{1}{2\pi RC\sqrt{6}}\)</span></td>
+<td><span class="math inline">\(|A|\ge 29\)</span></td>
+<td>Hz – 1 MHz (audio)</td>
+<td>Simple, low cost; sine waves at audio frequencies</td>
 </tr>
-<tr class="odd">
-<th><strong>RC Phase-Shift</strong></th>
-<th>3 <span class="math inline">\(RC\)</span> sections</th>
-<th><span class="math inline">\(f_{o} = \frac{1}{2\pi RC}\)</span></th>
-<th>\(\</th>
-<th>A\</th>
-<th>\ge 29\)</th>
+<tr>
+<td><strong>Wien Bridge</strong></td>
+<td>Lead-lag <span class="math inline">\(RC\)</span> bridge</td>
+<td><span class="math inline">\(f_o=\frac{1}{2\pi RC}\)</span></td>
+<td><span class="math inline">\(|A_v|\ge 3\;\Rightarrow\;\frac{R_3}{R_4}\ge 2\)</span></td>
+<td>Hz – 1 MHz (audio)</td>
+<td>Low distortion; easy tuning with ganged R or C</td>
 </tr>
-<tr class="header">
-<th><strong>Wien Bridge</strong></th>
-<th>Lead-lag <span class="math inline">\(RC\)</span> bridge</th>
-<th><span class="math inline">\(f_{o} = \frac{1}{2\pi RC}\)</span></th>
-<th>\(\</th>
-<th>A_v\</th>
-<th>\ge 3 \implies \frac{R_3}{R_4} \ge 2\)</th>
+<tr>
+<td><strong>Colpitts</strong></td>
+<td>2 capacitors (<span class="math inline">\(C_1,C_2\)</span>), 1 inductor (<span class="math inline">\(L\)</span>)</td>
+<td><span class="math inline">\(f_o=\frac{1}{2\pi\sqrt{LC_{eq}}},\;C_{eq}=\frac{C_1C_2}{C_1+C_2}\)</span></td>
+<td><span class="math inline">\(|A_v|\ge \frac{C_1}{C_2}\)</span></td>
+<td>100 kHz – several hundred MHz (RF)</td>
+<td>Good frequency stability; capacitive feedback divider</td>
 </tr>
-<tr class="odd">
-<th><strong>Colpitts</strong></th>
-<th>2 capacitors (<span class="math inline">\(C_{1},C_{2}\)</span>), 1 inductor (<span class="math inline">\(L\)</span>)</th>
-<th><span class="math inline">\(f_{o} = \frac{1}{2\pi}\)</span></th>
-<th>\(\</th>
-<th>A_v\</th>
-<th>\ge \frac{C_1}{C_2}\)</th>
+<tr>
+<td><strong>Hartley</strong></td>
+<td>2 inductors (<span class="math inline">\(L_1,L_2\)</span>), 1 capacitor (<span class="math inline">\(C\)</span>)</td>
+<td><span class="math inline">\(f_o=\frac{1}{2\pi\sqrt{L_{eq}C}},\;L_{eq}=L_1+L_2+2M\)</span></td>
+<td><span class="math inline">\(|A_v|\ge \frac{L_1}{L_2}\)</span></td>
+<td>100 kHz – several hundred MHz (RF)</td>
+<td>Tapped coil; easy tuning with one variable capacitor</td>
 </tr>
-<tr class="header">
-<th><strong>Hartley</strong></th>
-<th>2 inductors (<span class="math inline">\(L_{1},L_{2}\)</span>), 1 capacitor (<span class="math inline">\(C\)</span>)</th>
-<th><span class="math inline">\(f_{o} = \frac{1}{2\pi}\)</span></th>
-<th>\(\</th>
-<th>A_v\</th>
-<th>\ge \frac{L_1}{L_2}\)</th>
+<tr>
+<td><strong>Quartz Crystal</strong></td>
+<td>Piezoelectric quartz crystal (<span class="math inline">\(L,C,R,C_M\)</span>)</td>
+<td><span class="math inline">\(f_s=\frac{1}{2\pi\sqrt{LC}}\)</span></td>
+<td>Varies by circuit topology</td>
+<td>10 kHz – 100 MHz</td>
+<td>Highest frequency stability (<span class="math inline">\(Q\sim 10^{6}\)</span>)</td>
 </tr>
-<tr class="odd">
-<th><strong>Quartz Crystal</strong></th>
-<th>Piezoelectric quartz crystal (<span class="math inline">\(L,C,R,C_{M}\)</span>)</th>
-<th><span class="math inline">\(f_{s} = \frac{1}{2\pi}\)</span></th>
-<th>Varies by circuit topology</th>
-<th><span class="math inline">\(10kHz - 100MHz\)</span></th>
-<th>Highest frequency stability (<span class="math inline">\(Q \sim 10^{6}\)</span>)</th>
-</tr>
-</thead>
+</tbody>
+
 <tbody>
 </tbody>
 </table></div>
